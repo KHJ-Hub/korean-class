@@ -1,84 +1,57 @@
-<style>
-    .poem-container {
-        font-family: 'Pretendard', sans-serif;
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 25px;
-        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-        color: white;
-        border-radius: 15px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-    .poem-title {
-        font-size: 1.8rem;
-        font-weight: bold;
-        border-bottom: 2px solid rgba(255,255,255,0.3);
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .key-point {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 15px;
-        border-left: 4px solid #ffd700;
-        margin-bottom: 15px;
-        border-radius: 5px;
-    }
-    .key-point h4 {
-        margin: 0 0 8px 0;
-        color: #ffd700;
-        font-size: 1.1rem;
-    }
-    .analysis-list {
-        list-style: none;
-        padding: 0;
-        font-size: 0.95rem;
-    }
-    .analysis-list li {
-        margin-bottom: 8px;
-        padding-left: 20px;
-        position: relative;
-    }
-    .analysis-list li::before {
-        content: '✦';
-        position: absolute;
-        left: 0;
-        color: #ffd700;
-    }
-    .memo-box {
-        background: white;
-        color: #2c3e50;
-        padding: 15px;
-        border-radius: 10px;
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-    .highlight {
-        color: #e74c3c;
-        font-weight: bold;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나희덕 - 푸른 밤 학습실</title>
+    <style>
+        body { font-family: 'Pretendard', sans-serif; background-color: #0f172a; color: #f8fafc; line-height: 1.8; margin: 0; padding: 20px; }
+        .container { max-width: 700px; margin: 0 auto; background: rgba(30, 41, 59, 0.7); padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid #334155; }
+        h1 { color: #38bdf8; text-align: center; border-bottom: 2px solid #38bdf8; padding-bottom: 10px; }
+        .poem-section { background: #1e293b; padding: 25px; border-radius: 15px; margin: 20px 0; white-space: pre-wrap; text-align: center; font-style: italic; font-size: 1.1rem; }
+        .analysis-card { background: #334155; padding: 15px; border-radius: 10px; margin-top: 15px; border-left: 5px solid #fbbf24; }
+        .analysis-card h3 { margin: 0 0 10px 0; color: #fbbf24; }
+        .highlight { color: #f472b6; font-weight: bold; }
+        .back-btn { display: block; width: 100px; margin: 30px auto; padding: 10px; text-align: center; background: #38bdf8; color: #0f172a; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
 
-<div class="poem-container">
-    <div class="poem-title">🌌 나희덕, &lt;푸른 밤&gt; 핵심 정리</div>
-    
-    <div class="key-point">
-        <h4>📌 시의 주제</h4>
-        <p>사랑하는 대상을 향한 <span class="highlight">진정한 기다림</span>과 깊은 애정</p>
+<div class="container">
+    <h1>🌌 푸른 밤</h1>
+    <p style="text-align:center; color:#94a3b8;">나희덕</p>
+
+    <div class="poem-section">
+너에게 가려고 비틀거렸던 날들,
+내 발자국에 고인 <span class="highlight">푸른 밤</span>을 기억해.
+지상에 발을 붙이고 산다는 것,
+그것이 얼마나 <span class="highlight">가장 낮은 곳</span>으로
+나를 이끌어 가는지.
+
+너의 눈빛 하나에
+내 마음이 얼마나 깊게 패이는지,
+너는 알지 못할 거야.
+하지만 나는 기쁘게 그 길을 가리라.
     </div>
 
-    <div class="key-point">
-        <h4>🔍 주요 시어 및 시구 분석</h4>
-        <ul class="analysis-list">
-            <li><strong>너에게 가려고 비틀거렸던 날들:</strong> 사랑을 향한 화자의 고뇌와 노력</li>
-            <li><strong>푸른 밤:</strong> 고독하면서도 신비로운 사랑의 공간</li>
-            <li><strong>지상에 발을 붙이고 산다는 것:</strong> 현실의 삶과 고통을 수용함</li>
-            <li><strong>가장 낮은 곳:</strong> 겸손하고 희생적인 사랑의 태도</li>
+    <div class="analysis-card">
+        <h3>📌 시적 상황 및 화자</h3>
+        <ul>
+            <li><strong>화자:</strong> 사랑하는 대상을 향해 고통 속에서도 나아가는 이</li>
+            <li><strong>상황:</strong> 시련(비틀거림) 속에서도 대상을 향한 의지를 보임</li>
         </ul>
     </div>
 
-    <div class="memo-box">
-        <strong>💡 선생님의 한 줄 가이드:</strong><br>
-        이 시에서 '푸른색'은 단순한 차가움이 아니라, 고난을 견뎌내는 숭고한 이미지를 담고 있어요. 화자가 '가장 낮은 곳'으로 내려가는 이유가 무엇인지 생각하며 읽어봅시다!
+    <div class="analysis-card">
+        <h3>🔍 핵심 시어 풀이</h3>
+        <ul>
+            <li><strong>푸른 밤:</strong> 화자의 고독과 슬픔이 서린 시간/공간</li>
+            <li><strong>가장 낮은 곳:</strong> 대상을 향한 겸손하고 헌신적인 태도</li>
+        </ul>
     </div>
+
+    <a href="index.html" class="back-btn">처음으로</a>
 </div>
+
+</body>
+</html>
