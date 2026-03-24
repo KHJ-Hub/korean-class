@@ -6,7 +6,7 @@
     <title>나희덕 - <푸른 밤> 학습실</title>
     <style>
         :root { --main-dark: #0f172a; --point-blue: #38bdf8; --text-gray: #94a3b8; --point-pink: #f472b6; }
-        body { font-family: 'Pretendard', sans-serif; background-color: var(--main-dark); color: #f8fafc; line-height: 1.9; margin: 0; padding: 20px; }
+        body { font-family: 'Pretendard', sans-serif; background-color: var(--main-dark); color: #f8fafc; line-height: 2.2; margin: 0; padding: 20px; }
         .container { max-width: 800px; margin: 0 auto; }
         
         header { text-align: center; padding: 30px 0; border-bottom: 1px solid #334155; margin-bottom: 40px; }
@@ -14,32 +14,32 @@
         .author { color: var(--text-gray); margin-top: 10px; font-size: 1.1rem; }
 
         /* 시 본문 영역 */
-        .poem-box { background: rgba(30, 41, 59, 0.4); padding: 60px 30px; border-radius: 30px; text-align: center; font-size: 1.2rem; border: 1px solid #1e293b; margin-bottom: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
-        .stanza { margin-bottom: 50px; word-break: keep-all; }
-        .stanza-num { display: block; font-size: 0.85rem; color: var(--point-blue); margin-bottom: 15px; font-weight: bold; opacity: 0.6; text-transform: uppercase; }
+        .poem-box { background: rgba(30, 41, 59, 0.4); padding: 60px 30px; border-radius: 30px; text-align: center; font-size: 1.25rem; border: 1px solid #1e293b; margin-bottom: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+        .stanza { margin-bottom: 55px; word-break: keep-all; }
+        .stanza-num { display: block; font-size: 0.85rem; color: var(--point-blue); margin-bottom: 15px; font-weight: bold; opacity: 0.6; }
 
         /* 주석(툴팁) 스타일 */
         .tooltip { position: relative; display: inline-block; cursor: help; border-bottom: 2px solid var(--point-blue); color: #fff; padding-bottom: 2px; }
-        .tooltip .tooltiptext { visibility: hidden; width: 280px; background-color: #1e293b; color: #fff; text-align: center; border-radius: 12px; padding: 15px; position: absolute; z-index: 100; bottom: 130%; left: 50%; margin-left: -140px; opacity: 0; transition: 0.3s; font-size: 0.95rem; border: 1px solid var(--point-blue); box-shadow: 0 15px 35px rgba(0,0,0,0.6); line-height: 1.6; font-style: normal; font-weight: normal; }
+        .tooltip .tooltiptext { visibility: hidden; width: 280px; background-color: #1e293b; color: #fff; text-align: center; border-radius: 12px; padding: 15px; position: absolute; z-index: 100; bottom: 135%; left: 50%; margin-left: -140px; opacity: 0; transition: 0.3s; font-size: 0.95rem; border: 1px solid var(--point-blue); box-shadow: 0 15px 35px rgba(0,0,0,0.6); line-height: 1.6; font-style: normal; font-weight: normal; }
         .tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
 
         /* 분석 카드 */
         .analysis-section { display: grid; gap: 25px; margin-bottom: 60px; }
-        .card { background: #1e293b; padding: 30px; border-radius: 20px; border-left: 6px solid var(--point-blue); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card { background: #1e293b; padding: 30px; border-radius: 20px; border-left: 6px solid var(--point-blue); }
         .card h3 { margin: 0 0 15px 0; color: var(--point-blue); font-size: 1.3rem; }
         .card ul { margin: 0; padding-left: 20px; color: #cbd5e1; }
         .card li { margin-bottom: 10px; }
 
-        /* 강조 */
+        /* 강조 색상 */
         .hl { color: var(--point-pink); font-weight: bold; }
 
-        /* 버튼 */
+        /* 하단 버튼 */
         .btn-back { display: block; width: 160px; margin: 40px auto; padding: 15px; text-align: center; background: var(--point-blue); color: var(--main-dark); text-decoration: none; border-radius: 12px; font-weight: 800; transition: 0.3s; font-size: 1.1rem; }
         .btn-back:hover { background: #7dd3fc; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); }
 
-        footer { text-align: center; color: var(--text-gray); font-size: 0.9rem; margin: 60px 0 40px; border-top: 1px solid #334155; padding-top: 20px; }
+        footer { text-align: center; color: var(--text-gray); font-size: 0.9rem; margin-top: 60px; border-top: 1px solid #334155; padding-top: 20px; }
 
-        @media (max-width: 600px) { .poem-box { padding: 40px 15px; font-size: 1.05rem; } }
+        @media (max-width: 600px) { .poem-box { padding: 40px 15px; font-size: 1.1rem; } }
     </style>
 </head>
 <body>
@@ -52,35 +52,41 @@
 
     <div class="poem-box">
         <div class="stanza">
-            <span class="stanza-num">Stanza 1</span>
-            너에게로 가지 않으려고 미친 듯 걸었던 그 무수한 길도<br>
-            실은 네게로 향한 것이었다
+            <span class="stanza-num">제1연</span>
+            너에게로 가지 않으려고 미친 듯 걸었던<br>
+            그 무수한 길도<br>
+            <span class="tooltip">실은 네게로 향한 것이었다<span class="tooltiptext">역설법: '너'에게서 벗어나려 할수록 오히려 깊어지는 사랑의 본질을 깨달음</span></span>
         </div>
 
         <div class="stanza">
-            <span class="stanza-num">Stanza 2</span>
+            <span class="stanza-num">제2연</span>
             까마득한 밤길을 혼자 걸어갈 때에도<br>
-            내 응시에 날아간 별은 네 머리 위에서 반짝였을 것이고<br>
-            내 한숨과 입김에 꽃들은 내게로 몸을 기울여 흔들렸을 것이다.
+            내 응시에 날아간 별은<br>
+            네 머리 위에서 반짝였을 것이고<br>
+            내 한숨과 입김에 꽃들은<br>
+            내게로 몸을 기울여 흔들렸을 것이다.
         </div>
 
         <div class="stanza">
-            <span class="stanza-num">Stanza 3</span>
+            <span class="stanza-num">제3연</span>
             사랑에서 치욕으로, 다시 치욕에서 사랑으로,<br>
-            하루에도 몇 번씩 네게로 드리웠던 <span class="hl">두레박</span>
+            하루에도 몇 번씩 네게로 드리웠던<br>
+            <span class="hl">두레박</span>
         </div>
 
         <div class="stanza">
-            <span class="stanza-num">Stanza 4</span>
-            그러나 매양 퍼 올린 것은 수만 갈래의 길이었을 따름이다<br>
-            은하수의 한 별이 또 하나의 별을 찾아가는 그 수만의 길을<br>
-            나는 걷고 있는 것이다
+            <span class="stanza-num">제4연</span>
+            그러나 매양 퍼 올린 것은<br>
+            수만 갈래의 길이었을 따름이다<br>
+            은하수의 한 별이 또 하나의 별을 찾아가는<br>
+            그 수만의 길을 나는 걷고 있는 것이다
         </div>
 
         <div class="stanza">
-            <span class="stanza-num">Stanza 5</span>
-            나의 생애는 모든 <span class="hl">지름길</span>을 돌아서<br>
-            네게로 난 단 하나의 <span class="tooltip">에움길<span class="tooltiptext">빙 둘러서 가는 길. 시련을 거쳐 도달하는 진정한 사랑의 길</span></span>이었다
+            <span class="stanza-num">제5연</span>
+            나의 생애는 모든<br>
+            지름길을 돌아서<br>
+            네게로 난 단 하나의 <span class="tooltip">에움길<span class="tooltiptext">굽어 가는 길. 시련과 고난을 거쳐 도달하는 진정한 사랑의 길</span></span>이었다
         </div>
     </div>
 
@@ -97,9 +103,9 @@
         <div class="card">
             <h3>🔍 주요 표현 및 시어</h3>
             <ul>
-                <li><strong>역설법(1연):</strong> 벗어나려던 노력이 결국 사랑의 과정이었음을 깨달음</li>
+                <li><strong>역설법(1연):</strong> 벗어나려는 행위가 결국 사랑의 과정이었음을 표현</li>
                 <li><strong>대조(5연):</strong> 지름길(편한 길) vs 에움길(진정한 사랑의 길)</li>
-                <li><strong>두레박:</strong> 끊임없이 '너'의 마음을 확인하려는 화자의 시도</li>
+                <li><strong>두레박(3연):</strong> 끊임없이 '너'의 마음을 확인하고 다가가려는 화자의 시도</li>
             </ul>
         </div>
     </div>
