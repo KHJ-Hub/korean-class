@@ -2,63 +2,20 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1. 서정 갈래의 이해</title>
     <style>
-        :root { --main-blue: #1e3a8a; --sub-blue: #3b82f6; --bg-gray: #f8fafc; }
-        body { font-family: 'Pretendard', sans-serif; margin: 0; background-color: var(--bg-gray); padding: 20px; color: #1e293b; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: var(--sub-blue); font-weight: bold; }
-        
-        header { border-bottom: 2px solid var(--main-blue); padding-bottom: 10px; margin-bottom: 30px; }
-        h1 { color: var(--main-blue); margin: 0; font-size: 1.8rem; }
-        
-        /* 작품 리스트 스타일 */
-        .work-list { display: flex; flex-direction: column; gap: 15px; }
-        .work-item { 
-            background: white; padding: 20px; border-radius: 12px; 
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05); cursor: pointer;
-            transition: 0.2s; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center;
-        }
-        .work-item:hover { border-color: var(--sub-blue); background: #f0f7ff; transform: translateX(5px); }
-        .work-info h3 { margin: 0; color: #334155; font-size: 1.1rem; }
-        .work-info p { margin: 5px 0 0; font-size: 0.9rem; color: #64748b; }
-        .status-tag { font-size: 0.8rem; padding: 4px 8px; border-radius: 6px; background: #dcfce7; color: #166534; font-weight: bold; }
+        body { font-family: 'Pretendard', sans-serif; padding: 40px; background: #f8fafc; }
+        .card { background: white; padding: 25px; border-radius: 12px; border-left: 6px solid #3b82f6; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card:hover { transform: translateX(5px); background: #f0f7ff; }
+        .back { text-decoration: none; color: #3b82f6; display: block; margin-bottom: 20px; font-weight: bold; }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <a href="index.html" class="back-link">← 메인 갈래 목록으로</a>
-    
-    <header>
-        <h1>🌸 1. 서정 갈래의 이해</h1>
-        <p>시적 화자의 목소리를 통해 정서를 노래하는 문학 양식</p>
-    </header>
-
-    <div class="work-list">
-        <div class="work-item" onclick="location.href='pureun-bam.html'">
-            <div class="work-info">
-                <h3>🌌 나희덕 - &lt;푸른 밤&gt;</h3>
-                <p>사랑하는 대상을 향한 운명적 사랑과 성찰</p>
-            </div>
-            <span class="status-tag">학습 완료</span>
-        </div>
-
-        <div class="work-item" style="opacity: 0.6; cursor: default;">
-            <div class="work-info">
-                <h3>📌 다음 작품 업데이트 예정</h3>
-                <p>교과서의 다음 시 작품 분석이 곧 업로드됩니다.</p>
-            </div>
-            <span class="status-tag" style="background:#f1f5f9; color:#64748b;">준비 중</span>
-        </div>
-
+    <a href="index.html" class="back">← 메인으로</a>
+    <h1>🌸 1. 서정 갈래의 이해</h1>
+    <div class="card" onclick="location.href='pureun-bam.html'">
+        <h3>🌌 나희덕 - &lt;푸른 밤&gt;</h3>
+        <p>사랑하는 대상을 향한 운명적 사랑과 성찰</p>
     </div>
-</div>
-
-<footer>
-    <p style="text-align:center; margin-top:50px; color:#94a3b8; font-size:0.8rem;">© 2026 1학년 문학 학습 저장소</p>
-</footer>
-
 </body>
 </html>
