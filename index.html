@@ -3,69 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1학년 국어 문학 학습실</title>
+    <title>1학년 국어 학습 저장소</title>
     <style>
         :root {
-            --main-color: #2c3e50;
-            --point-color: #3498db;
-            --bg-color: #f4f7f6;
+            --main-blue: #1e3a8a;
+            --sub-blue: #3b82f6;
+            --bg-gray: #f8fafc;
+            --text-dark: #1e293b;
         }
-        body { font-family: 'Pretendard', sans-serif; margin: 0; background-color: var(--bg-color); color: #333; line-height: 1.6; }
-        header { background: var(--main-color); color: white; padding: 2rem 1rem; text-align: center; }
-        nav { background: #fff; padding: 10px; text-align: center; border-bottom: 2px solid var(--point-color); sticky; top: 0; }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--main-color); font-weight: bold; }
-        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 10px; shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h2 { border-left: 5px solid var(--point-color); padding-left: 10px; color: var(--main-color); }
-        .lesson-card { background: #eef2f3; padding: 15px; border-radius: 8px; margin-bottom: 15px; transition: 0.3s; cursor: pointer; }
-        .lesson-card:hover { background: #dceefb; transform: translateY(-3px); }
-        .footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #777; }
-        .quiz-box { background: #fff3cd; padding: 15px; border-radius: 8px; border: 1px solid #ffeeba; margin-top: 20px; }
-        button { background: var(--point-color); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; }
+        body { font-family: 'Pretendard', -apple-system, sans-serif; margin: 0; background-color: var(--bg-gray); color: var(--text-dark); line-height: 1.6; }
+        
+        /* 헤더 디자인 */
+        header { background: linear-gradient(135deg, var(--main-blue), var(--sub-blue)); color: white; padding: 3rem 1rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        header h1 { margin: 0; font-size: 2.2rem; letter-spacing: -0.05em; }
+        header p { margin: 10px 0 0; opacity: 0.9; font-weight: 300; }
+
+        /* 컨텐츠 영역 */
+        .container { max-width: 900px; margin: -2rem auto 3rem; padding: 0 20px; }
+        
+        /* 섹션 타이틀 */
+        h2 { font-size: 1.5rem; margin: 3rem 0 1rem; color: var(--main-blue); border-left: 4px solid var(--main-blue); padding-left: 12px; }
+
+        /* 카드 그리드 */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        
+        /* 학습 카드 스타일 */
+        .card { 
+            background: white; border-radius: 12px; padding: 24px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            transition: all 0.3s ease; cursor: pointer; border: 1px solid #e2e8f0;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 20px rgba(0,0,0,0.1); border-color: var(--sub-blue); }
+        .card h3 { margin: 0 0 10px; font-size: 1.25rem; color: var(--main-blue); }
+        .card p { margin: 0; color: #64748b; font-size: 0.95rem; }
+        .card .tag { display: inline-block; background: #dbeafe; color: #1e40af; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 12px; align-self: flex-start; }
+
+        /* 공지사항 전용 섹션 */
+        .notice-box { background: #fffbeb; border: 1px solid #fef3c7; padding: 20px; border-radius: 12px; margin-top: 20px; }
+        .notice-box h3 { margin-top: 0; color: #92400e; font-size: 1.1rem; }
+
+        footer { text-align: center; padding: 40px; color: #94a3b8; font-size: 0.9rem; border-top: 1px solid #e2e8f0; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>1학년 국어: 문학의 세계</h1>
-    <p>공통국어1 문학 단원 핵심 정리 & 학습 자료실</p>
+    <h1>📖 1학년 국어 학습 저장소</h1>
+    <p>공통국어1 수업 자료 및 주간 공지사항</p>
 </header>
 
-<nav>
-    <a href="#poetry">시(운문)</a>
-    <a href="#novel">소설(산문)</a>
-    <a href="#notice">수업 공지</a>
-</nav>
-
 <div class="container">
-    <section id="poetry">
-        <h2>🌸 서정 갈래 (시)</h2>
-        <div class="lesson-card">
-            <strong>[핵심] 시적 화자의 태도와 어조</strong>
-            <p>시 속에서 말하는 이(화자)가 대상을 어떻게 바라보고 있는지 파악해 봅시다.</p>
-<div class="lesson-card" onclick="location.href='pureun-bam.html'">
-    <strong>🌌 [작품] 나희덕 - 푸른 밤 (학습 중)</strong>
-    <p>기다림과 사랑의 성찰, 핵심 시어 분석 보기</p>
-</div>
-    </section>
-
-    <section id="novel" style="margin-top: 40px;">
-        <h2>📚 서사 갈래 (소설)</h2>
-        <div class="lesson-card">
-            <strong>[핵심] 시점의 종류와 효과</strong>
-            <p>1인칭 주인공, 3인칭 전지적 작가 시점 등 서술자의 위치에 따른 차이점</p>
-        </div>
-    </section>
-
-    <div class="quiz-box">
-        <h3>💡 오늘의 문학 퀴즈</h3>
-        <p id="quiz-q">"반어법과 역설법의 차이는 무엇일까요?"</p>
-        <button onclick="alert('반어는 표현과 속뜻이 반대인 것, 역설은 표현 자체에 모순이 있는 것입니다!')">정답 확인</button>
+    
+    <div class="notice-box">
+        <h3>📢 이번 주 공지사항</h3>
+        <p>이번 주에는 나희덕의 '푸른 밤' 시를 분석합니다. 아래 학습 카드를 통해 미리 예습해 보세요!</p>
     </div>
-</div>
 
-<div class="footer">
-    <p>© 2026 1학년 국어 학습실 | 담당교사: 김현정</p>
-</div>
+    <h2>🌸 문학 학습실</h2>
+    <div class="grid">
+        <div class="card" onclick="location.href='pureun-bam.html'">
+            <span class="tag">학습 중</span>
+            <h3>🌌 나희덕 - <푸른 밤></h3>
+            <p>교과서 핵심 분석, 시구 주석 툴팁, 연별 정리 학습하기</p>
+        </div>
 
-</body>
-</html>
+        <div class="card">
+            <span class="tag" style="background:#f1f5f9; color:#64748b;">준비 중</span>
+            <h3>📜 다음 작품 미리보기</h3>
+            <p>작품 업데이트 예정입니다.</p>
+        </div>
